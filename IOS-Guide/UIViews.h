@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  UIViews.h
 //  IOS-Guide
 //
 //  Created by Sunnycool on 16/4/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
-
-@property (nonatomic, strong) NSMutableString* pageTitle;
+@interface UIViews : UIViewController
 
 @end

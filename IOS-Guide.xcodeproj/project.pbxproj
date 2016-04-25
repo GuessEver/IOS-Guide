@@ -12,6 +12,10 @@
 		5F6720181CCE2BA400E5A18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6720171CCE2BA400E5A18A /* Assets.xcassets */; };
 		5F67202D1CCE2E8600E5A18A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F67202C1CCE2E8600E5A18A /* MainViewController.m */; };
 		5F67202F1CCE2F2800E5A18A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5F67202E1CCE2F2800E5A18A /* README.md */; };
+		5F6720341CCE4C0F00E5A18A /* UIViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6720331CCE4C0F00E5A18A /* UIViews.m */; };
+		5F6720441CCE4DC200E5A18A /* Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F67203F1CCE4DC200E5A18A /* Gesture.m */; };
+		5F6720451CCE4DC200E5A18A /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6720411CCE4DC200E5A18A /* Http.m */; };
+		5F6720461CCE4DC200E5A18A /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6720431CCE4DC200E5A18A /* Layout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,14 @@
 		5F67202B1CCE2E8600E5A18A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5F67202C1CCE2E8600E5A18A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5F67202E1CCE2F2800E5A18A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5F6720321CCE4C0F00E5A18A /* UIViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViews.h; sourceTree = "<group>"; };
+		5F6720331CCE4C0F00E5A18A /* UIViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViews.m; sourceTree = "<group>"; };
+		5F67203E1CCE4DC200E5A18A /* Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gesture.h; sourceTree = "<group>"; };
+		5F67203F1CCE4DC200E5A18A /* Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gesture.m; sourceTree = "<group>"; };
+		5F6720401CCE4DC200E5A18A /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
+		5F6720411CCE4DC200E5A18A /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
+		5F6720421CCE4DC200E5A18A /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		5F6720431CCE4DC200E5A18A /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +69,21 @@
 		5F67200A1CCE2BA400E5A18A /* IOS-Guide */ = {
 			isa = PBXGroup;
 			children = (
-				5F67202B1CCE2E8600E5A18A /* MainViewController.h */,
-				5F67202C1CCE2E8600E5A18A /* MainViewController.m */,
 				5F67200E1CCE2BA400E5A18A /* AppDelegate.h */,
 				5F67200F1CCE2BA400E5A18A /* AppDelegate.m */,
 				5F6720171CCE2BA400E5A18A /* Assets.xcassets */,
 				5F67201C1CCE2BA400E5A18A /* Info.plist */,
 				5F67200B1CCE2BA400E5A18A /* Supporting Files */,
+				5F67202B1CCE2E8600E5A18A /* MainViewController.h */,
+				5F67202C1CCE2E8600E5A18A /* MainViewController.m */,
+				5F6720321CCE4C0F00E5A18A /* UIViews.h */,
+				5F6720331CCE4C0F00E5A18A /* UIViews.m */,
+				5F67203E1CCE4DC200E5A18A /* Gesture.h */,
+				5F67203F1CCE4DC200E5A18A /* Gesture.m */,
+				5F6720401CCE4DC200E5A18A /* Http.h */,
+				5F6720411CCE4DC200E5A18A /* Http.m */,
+				5F6720421CCE4DC200E5A18A /* Layout.h */,
+				5F6720431CCE4DC200E5A18A /* Layout.m */,
 			);
 			path = "IOS-Guide";
 			sourceTree = "<group>";
@@ -144,10 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6720451CCE4DC200E5A18A /* Http.m in Sources */,
+				5F6720461CCE4DC200E5A18A /* Layout.m in Sources */,
 				5F6720101CCE2BA400E5A18A /* AppDelegate.m in Sources */,
+				5F6720341CCE4C0F00E5A18A /* UIViews.m in Sources */,
 				5F67202D1CCE2E8600E5A18A /* MainViewController.m in Sources */,
 				5F67202F1CCE2F2800E5A18A /* README.md in Sources */,
 				5F67200D1CCE2BA400E5A18A /* main.m in Sources */,
+				5F6720441CCE4DC200E5A18A /* Gesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
