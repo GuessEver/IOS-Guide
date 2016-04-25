@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  IOS-Guide
 //
 //  Created by Sunnycool on 16/4/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewController : UIViewController
 
 @end
-
