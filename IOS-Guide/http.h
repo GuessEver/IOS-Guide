@@ -10,4 +10,9 @@
 
 @interface Http : UIViewController
 
+@property (nonatomic, strong) UITextField* urlInputField;
+@property (nonatomic, strong) UITextView* requestInputField;
+@property (nonatomic, strong) UILabel* content;
+@property (nonatomic, strong) UIWebView* contentPreview;
+
 @end

@@ -10,5 +10,6 @@
 #ifndef GlobalVariables_h
 #define GlobalVariables_h
 
+CGRect windowRect;
 
 #endif /* GlobalVariables_h */
