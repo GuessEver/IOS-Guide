@@ -1,12 +1,12 @@
 //
-//  layout.m
+//  Layout.m
 //  IOS-Guide
 //
-//  Created by Sunnycool on 16/4/25.
+//  Created by GuessEver on 16/4/25.
 //  Copyright © 2016年 GuessEver. All rights reserved.
 //
 
-#import "layout.h"
+#import "Layout.h"
 
 @implementation Layout
 

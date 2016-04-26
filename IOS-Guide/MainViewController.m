@@ -2,7 +2,7 @@
 //  MainViewController.m
 //  IOS-Guide
 //
-//  Created by Sunnycool on 16/4/25.
+//  Created by GuessEver on 16/4/25.
 //  Copyright © 2016年 GuessEver. All rights reserved.
 //
 
@@ -11,43 +11,38 @@
 #import "Http.h"
 #import "Gesture.h"
 #import "Layout.h"
-#import <CommonCrypto/CommonDigest.h>
 
 @implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.pageTitle = [[NSMutableString alloc] initWithString: @"IOS Guide"];
     [self createTabBars];
-    [self createNavigationBars];
 }
 
 - (void) createTabBars {
     UIViewController *tab1 = [[UIViews alloc] init];
     tab1.tabBarItem.title = @"UI控件";
+    tab1.tabBarItem.image = [UIImage imageNamed:@"uiviews-ico"];
     
     UIViewController *tab2 = [[Http alloc] init];
     tab2.tabBarItem.title = @"HTTP请求";
+    tab2.tabBarItem.image = [UIImage imageNamed:@"http-ico"];
     
     UIViewController *tab3 = [[Gesture alloc] init];
     tab3.tabBarItem.title = @"手势";
+    tab3.tabBarItem.image = [UIImage imageNamed:@"gesture-ico"];
     
     UIViewController *tab4 = [[Layout alloc] init];
     tab4.tabBarItem.title = @"排版布局";
+    tab4.tabBarItem.image = [UIImage imageNamed:@"layout-ico"];
+    tab4.tabBarItem.selectedImage = [UIImage imageNamed:@"layout-ico"];
     
-    UITabBarController *tabs = [[UITabBarController alloc] init];
-    tabs.viewControllers = @[tab1, tab2, tab3, tab4];
-    tabs.selectedIndex = 0;
+    self.tabs = [[UITabBarController alloc] init];
+    self.tabs.viewControllers = @[tab1, tab2, tab3, tab4];
+    self.tabs.selectedIndex = 0;
     
-    [self.view addSubview:tabs.view];
-}
-
-- (void) createNavigationBars {
-    self.navigationController.view.hidden = YES;
-    UINavigationController *navs = [[UINavigationController alloc] init];
-    [navs.navigationBar setBarStyle:UIBarStyleDefault];
-    [self.view addSubview:navs.view];
+    [self.view addSubview:self.tabs.view];
 }
 
 @end
