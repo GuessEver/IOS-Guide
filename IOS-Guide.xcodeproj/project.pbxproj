@@ -36,6 +36,7 @@
 		5F6720411CCE4DC200E5A18A /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
 		5F6720421CCE4DC200E5A18A /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
 		5F6720431CCE4DC200E5A18A /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
+		5FD21BB81CCF7865003BBC99 /* GlobalVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		5F67200A1CCE2BA400E5A18A /* IOS-Guide */ = {
 			isa = PBXGroup;
 			children = (
+				5FD21BB81CCF7865003BBC99 /* GlobalVariables.h */,
 				5F67200E1CCE2BA400E5A18A /* AppDelegate.h */,
 				5F67200F1CCE2BA400E5A18A /* AppDelegate.m */,
 				5F6720171CCE2BA400E5A18A /* Assets.xcassets */,
@@ -267,8 +269,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "IOS-Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.guessever.IOS-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 arm7s arm64";
 			};
 			name = Debug;
 		};
@@ -279,8 +283,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "IOS-Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.guessever.IOS-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 arm7s arm64";
 			};
 			name = Release;
 		};

@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViews.h"
+#import "Http.h"
+#import "Gesture.h"
+#import "Layout.h"
 
 @interface MainViewController : UITabBarController
 

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UIViews : UIViewController
+
+@property (nonatomic, strong) UIScrollView *mainViewCtrl;
+@property (nonatomic, strong) UIView *mainView;
 
 @end

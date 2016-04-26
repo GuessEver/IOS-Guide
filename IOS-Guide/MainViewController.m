@@ -7,10 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "UIViews.h"
-#import "Http.h"
-#import "Gesture.h"
-#import "Layout.h"
+#import "GlobalVariables.h"
 
 @implementation MainViewController
 
@@ -18,10 +15,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self createTabBars];
+    
 }
 
 - (void) createTabBars {
-    UIViewController *tab1 = [[UIViews alloc] init];
+    UIViews *tab1 = [[UIViews alloc] init];
     tab1.tabBarItem.title = @"UI控件";
     tab1.tabBarItem.image = [UIImage imageNamed:@"uiviews-ico"];
     
@@ -36,7 +34,6 @@
     UIViewController *tab4 = [[Layout alloc] init];
     tab4.tabBarItem.title = @"排版布局";
     tab4.tabBarItem.image = [UIImage imageNamed:@"layout-ico"];
-    tab4.tabBarItem.selectedImage = [UIImage imageNamed:@"layout-ico"];
     
     self.tabs = [[UITabBarController alloc] init];
     self.tabs.viewControllers = @[tab1, tab2, tab3, tab4];
