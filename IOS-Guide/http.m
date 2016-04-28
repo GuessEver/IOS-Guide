@@ -79,6 +79,7 @@ extern CGRect windowRect;
     NSURLSessionDataTask* task = [session dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
         NSLog(@"data:\n%@\n\n", data);
         NSLog(@"dataString:\n%@\n\n", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        NSLog(@"dataDictionary:\n%@\n\n", [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
         NSLog(@"response:\n%@\n\n", response);
         NSLog(@"error:\n%@\n\n", error);
         
@@ -105,6 +106,7 @@ extern CGRect windowRect;
     NSURLSessionDataTask* task = [session dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
         NSLog(@"data:\n%@\n\n", data);
         NSLog(@"dataString:\n%@\n\n", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        NSLog(@"dataDictionary:\n%@\n\n", [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
         NSLog(@"response:\n%@\n\n", response);
         NSLog(@"error:\n%@\n\n", error);
         
