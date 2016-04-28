@@ -84,6 +84,7 @@ extern CGRect windowRect;
         
         
         [self.contentPreview loadHTMLString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] baseURL:nil];
+        //[self.contentPreview loadHTMLString:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] baseURL:[NSURL URLWithString:@"localhost"]];
     }];
     [task resume];
     
