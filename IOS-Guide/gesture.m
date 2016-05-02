@@ -15,6 +15,15 @@ UIImageView* imgView;
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 0, 0)];
+    label.text = @"通过UIPanGestureRecognizer您可以拖动缩放旋转这张图片";
+    [label sizeToFit];
+    [self.view addSubview:label];
+    imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 200, 200)];
+    UIImage* img = [UIImage imageNamed:@"gesture-ico"];
+    [imgView setImage:img];
+    [self.view addSubview:imgView];
+    
     [self gesture_tap]; // 点击
     [self gesture_pinch]; // 缩放
     [self gesture_pan]; // 拖动
@@ -22,7 +31,6 @@ UIImageView* imgView;
     [self gesture_rotation]; // 旋转
     [self gesture_longPress]; // 长按
 }
-
 - (void) gesture_tap {
     // UITapGestureRecognizer 任意次数的点击
     UITapGestureRecognizer* oneFingerOneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerOneTapsHandler:)];
@@ -61,22 +69,17 @@ UIImageView* imgView;
 - (void) gesture_pinch {
     // UIPinchGestureRecognizer 两指缩放
     UIPinchGestureRecognizer* twoFingerPinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerPinchHandler:)];
-    [self.view addGestureRecognizer:twoFingerPinch];
+    [imgView addGestureRecognizer:twoFingerPinch];
 }
 - (void) twoFingerPinchHandler:(UIPinchGestureRecognizer*)sender {
-    printf("Action: Two Finger Pinch, scale: %f\n", sender.scale);
+    // printf("Action: Two Finger Pinch, scale: %f\n", sender.scale);
+    CGAffineTransform newTrans = CGAffineTransformScale(imgView.transform, sender.scale, sender.scale);
+    [imgView setTransform:newTrans];
+    [sender setScale:1.0];
 }
 
 - (void) gesture_pan {
     // UIPanGestureRecognizer 拖动
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 0, 0)];
-    label.text = @"通过UIPanGestureRecognizer您可以拖动这张图片";
-    [label sizeToFit];
-    [self.view addSubview:label];
-    imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 200, 200)];
-    UIImage* img = [UIImage imageNamed:@"gesture-ico"];
-    [imgView setImage:img];
-    [self.view addSubview:imgView];
     UIPanGestureRecognizer* oneFingerPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerPanHandler:)];
     // [oneFingerPan setMaximumNumberOfTouches:1];
     // [oneFingerPan setMinimumNumberOfTouches:1];
@@ -85,7 +88,7 @@ UIImageView* imgView;
 }
 - (void) oneFingerPanHandler:(UIPanGestureRecognizer*)sender {
     CGPoint point = [sender translationInView:self.view];
-    printf("Action: Pan From (%f, %f)\n", point.x, point.y);
+    // printf("Action: Pan From (%f, %f)\n", point.x, point.y);
     sender.view.center = CGPointMake(sender.view.center.x + point.x, sender.view.center.y + point.y);
     [sender setTranslation:CGPointMake(0, 0) inView:self.view];
 }
@@ -106,10 +109,13 @@ UIImageView* imgView;
 - (void) gesture_rotation {
     // UIRotationGestureRecognizer 两指旋转
     UIRotationGestureRecognizer* twoFingersRotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingersRotateHandler:)];
-    [self.view addGestureRecognizer:twoFingersRotate];
+    [imgView addGestureRecognizer:twoFingersRotate];
 }
 - (void) twoFingersRotateHandler:(UIRotationGestureRecognizer*)sender {
-    printf("Action: Rotate in degree %f\n", [sender rotation] * 180 / M_PI);
+    // printf("Action: Rotate in degree %f\n", sender.rotation * 180 / M_PI);
+    CGAffineTransform newTrans = CGAffineTransformRotate(imgView.transform, sender.rotation);
+    [imgView setTransform:newTrans];
+    [sender setRotation:0.0];
 }
 
 - (void) gesture_longPress {
